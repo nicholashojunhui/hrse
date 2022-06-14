@@ -40,9 +40,13 @@ apiKey = "XXXXXXXXXXXXXXXXXXXXX"
 # This type of unsecured MQTT connection uses the least amount of system resources.
 useUnsecuredTCP = True
 
-# Set useUnsecuredWebSockets to True to use MQTT over an unsecured websocket on port 80.
+# Set useUnsecuredWebSockets1 to True to use MQTT over an unsecured websocket on port 80.
 # Try this if port 1883 is blocked on your network.
-useUnsecuredWebsockets = False
+useUnsecuredWebsockets1 = False
+
+# Set useUnsecuredWebSockets2 to True to use MQTT over an unsecured websocket on port 8883.
+# Try this if the above ports are blocked on your network.
+useUnsecuredWebsockets2 = False
 
 # Set useSSLWebsockets to True to use MQTT over a secure websocket on port 443.
 # This type of connection will use slightly more system resources, but the connection
@@ -60,9 +64,14 @@ if useUnsecuredTCP:
 	tPort = 1883
 	tTLS = None
 
-if useUnsecuredWebsockets:
+if useUnsecuredWebsockets1:
 	tTransport = "websockets"
 	tPort = 80
+	tTLS = None
+	
+if useUnsecuredWebsockets2:
+	tTransport = "websockets"
+	tPort = 8883
 	tTLS = None
 
 if useSSLWebsockets:
