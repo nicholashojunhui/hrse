@@ -38,11 +38,11 @@ apiKey = "XXXXXXXXXXXXXXXXXXXXX"
 
 # Set useUnsecuredTCP to True to use the default MQTT port of 1883
 # This type of unsecured MQTT connection uses the least amount of system resources.
-useUnsecuredTCP = False
+useUnsecuredTCP = True
 
 # Set useSecuredTCP to True to use the default MQTT port of 8883
 # This type of unsecured MQTT connection uses the least amount of system resources.
-useSecuredTCP = True
+useSecuredTCP = False
 
 # Set useUnsecuredWebSockets to True to use MQTT over an unsecured websocket on port 80.
 # Try this if port 1883 is blocked on your network.
