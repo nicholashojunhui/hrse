@@ -11,7 +11,7 @@ Command Execution Sequence Instructions (for leap_teleop.py)
 
 	$ LeapControlPanel
 	
-***Note if LeapControlPanel cannot work, type
+***Note if LeapControlPanel cannot work, type the following to restart leap:
 	$ sudo service leapd restart
 	
 3. Launch Gazebo in TurtleBot3 World
@@ -22,7 +22,7 @@ Command Execution Sequence Instructions (for leap_teleop.py)
 
 	$ rosrun leap_motion sender.py
 
-5. Run node that allows you to use hand gestures to control the TB3
+5. Run node that subscribes the data from the previous node and also allows you to use hand gestures to control the TB3
 
 	$ rosrun hrse leap_teleop.py
 
@@ -31,10 +31,10 @@ Command Execution Sequence Instructions (for leap_teleop.py)
 
 6. Try the gesture control by changing your hand gestures into the various forms as illustrated in the demo or pictures; these forms are represented by the following:
 
-	Hands on level: 				Brake
+	Hands on level (aka starting position): 	Brake
 	Hands (include all fingers) pointing down: 	Forward
 	Hands (include all fingers) pointing up: 	Backwards
-	Hands roll to left: 				Left (Counterclockwise)
-	Hands roll to right: 				Right (Clockwise)
+	Hands roll to left: 				Left (Move Counterclockwise)
+	Hands roll to right: 				Right (Move Clockwise)
 	
  
