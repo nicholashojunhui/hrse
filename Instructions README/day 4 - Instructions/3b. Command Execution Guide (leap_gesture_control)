@@ -11,22 +11,20 @@ Command Execution Sequence Instructions (for leap_teleop.py)
 
 	$ LeapControlPanel
 	
-if LeapControlPanel cannot work, type
-
+***Note if LeapControlPanel cannot work, type
 	$ sudo service leapd restart
-	
 	
 3. Launch Gazebo in TurtleBot3 World
 
 	$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 	
-4. 
+4. Run the Publisher node; publish data of your hands' motion to ROS
 
 	$ rosrun leap_motion sender.py
 
-Run node that allows you to use finger gestures to control the TB3
+5. Run node that allows you to use finger gestures to control the TB3
 
-	$ rosrun hrse gesture_control.py
+	$ rosrun hrse leap_teleop.py
 
 *ensure that your python codes are in the src folder of your hrse package
 *ensure you have given permissions to your python files (1. cd to directory; 2. chmod +x name_of_python_file.py)
