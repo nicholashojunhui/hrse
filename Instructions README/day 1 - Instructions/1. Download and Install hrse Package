@@ -14,6 +14,7 @@ $ cd ~/catkin_ws && catkin_make
 4. Go to catkin_ws/src/hrse/src and make all python files executable
 
 
-ID: Kw4QBwQWBzkEKB8fLgYDHSI
-Username: Kw4QBwQWBzkEKB8fLgYDHSI
-Pass: SOzIgx8V1ChxwP2i8+ZICPDn
+
+mqtt_client_ID = "Ox8PKAsSAhA3BAgsAycWOic"
+mqtt_username = "Ox8PKAsSAhA3BAgsAycWOic"
+mqtt_password = "jy78U3Cgovnkjz6cK4mi7Nv1"
