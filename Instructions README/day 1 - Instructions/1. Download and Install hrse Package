@@ -13,8 +13,18 @@ $ cd ~/catkin_ws && catkin_make
 
 4. Go to catkin_ws/src/hrse/src and make all python files executable
 
+#Installation steps:
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo pip install thingspeak
 
+#To insert in codes (Backup old codes first!):
+import thingspeak
 
-mqtt_client_ID = "Ox8PKAsSAhA3BAgsAycWOic"
-mqtt_username = "Ox8PKAsSAhA3BAgsAycWOic"
-mqtt_password = "jy78U3Cgovnkjz6cK4mi7Nv1"
+#Channel settings
+channelID = "XXXX"
+apiKey = "XXXX"
+channel = thingspeak.Channel(id=channelID, api_key=apiKey)
+
+#To publish to thingspeak
+channel.update({'field1': str(XXXX), 'field2': str(XXXX), 'field3': str(XXXX), 'field4': str(XXXX)})
