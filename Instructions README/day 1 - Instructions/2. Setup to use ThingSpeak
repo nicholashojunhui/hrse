@@ -9,3 +9,12 @@ Setup Instructions
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo pip install thingspeak
+
+If the above command has errors, try the following instead:
+(i) Go to the website https://pypi.org/project/thingspeak/#files and download the thingspeak zip file (.tar.gz)
+
+(ii) Change directory to the thingspeak folder
+$ cd /pathdirectory
+
+(iii) Run the setup.py file using the below command:
+$ python setup.py install
