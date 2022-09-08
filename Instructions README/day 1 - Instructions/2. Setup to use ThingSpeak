@@ -17,4 +17,4 @@ If the above command has errors, try the following instead:
 $ cd /pathdirectory
 
 (iii) Run the setup.py file using the below command:
-$ python setup.py install
+$ sudo python setup.py install
