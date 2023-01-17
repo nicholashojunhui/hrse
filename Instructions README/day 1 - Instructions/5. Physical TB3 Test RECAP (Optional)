@@ -1,3 +1,5 @@
+
+#####################################################################################
 #####################################################################################
 Ensure that your workshop materials have been submitted first before trying this out!
 #####################################################################################
@@ -33,7 +35,7 @@ $ roscore
 
 $ ssh pi@192.168.XX.XX
 
-You will see in this terminal that you are connected to the pi’s terminal
+You will see in this terminal that you are connected to the pi's terminal
 
 (C) On the TB3 PC (using the linked pi terminal), type the following to bring up basic packages to start TB3:
 
