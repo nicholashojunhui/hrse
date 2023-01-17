@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ##### Workshop Day 4 - Interaction with Robots via Hand Gesture #####
 ##### to be inputed on ***right*** side of camera #####
@@ -45,35 +45,35 @@ def callback(msg):
 	global scan0, scan45, scan90, scan135, scan180, scan225, scan270, scan315
 	#print('==== Laser Scan Details =====')
 	#print('s1 [0]')
-	#print msg.ranges[0]
+	#print(msg.ranges[0]))
 	scan0 = msg.ranges[0]
 
 	#print('s2 [45]')
-	#print msg.ranges[45]
+	#print(msg.ranges[45])
 	scan45 = 
 
 	#print('s3 [90]')
-	#print msg.ranges[90]
+	#print(msg.ranges[90])
 	scan90 = 
 
 	#print('s4 [135]')
-	#print msg.ranges[135]
+	#print(msg.ranges[135])
 	scan135 = 
 
 	#print('s5 [180]')
-	#print msg.ranges[180]
+	#print(msg.ranges[180])
 	scan180 = 
 
 	#print('s6 [225]')
-	#print msg.ranges[225]
+	#print(msg.ranges[225])
 	scan225 = 
 
 	#print('s7 [270]')
-	#print msg.ranges[270]
+	#print(msg.ranges[270])
 	scan270 = 
 
 	#print('s8 [315]')
-	#print msg.ranges[315]
+	#print(msg.ranges[315])
 	scan315 = 
 
 ############################################################
@@ -109,8 +109,12 @@ while(capture.isOpened()):
 	frame = cv2.flip(frame,1)
 	
 	# Get hand data from the rectangle sub window
-	cv2.rectangle(frame, (450,80), (600,250), (0, 255, 0), 0)
-	crop_image = frame[80:250,450:600]
+	# You can adjust the position and size of the rectangle to your liking:
+	# cv2.rectangle(image,start_point_X_Y_coordinates,end_point_X_Y_coordinates, colour, thickness)
+	cv2.rectangle(frame, (850,0), (1200,300), (0, 255, 0), 0)
+	crop_image = frame[0:300,850:1200]
+	#cv2.rectangle(frame, (450,80), (600,250), (0, 255, 0), 0)
+	#crop_image = frame[80:250,450:600]
 	drawing = np.zeros(crop_image.shape,dtype =  np.uint8)
 
 	# Apply Gaussian blur (also known as Gaussian smoothing); to reduce image noise and reduce detail
@@ -144,7 +148,8 @@ while(capture.isOpened()):
 	# Show threshold image
 	cv2.imshow("Thresholded", thresh)
 	# Find contours
-	image, contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+	contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+	#image, contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 	#_, contours, _ = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 	try:
