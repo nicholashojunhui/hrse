@@ -1,5 +1,9 @@
 Command Execution Sequence Instructions (for gesture_control.py)
 
+0. First install the imutils python module:
+
+	$ sudo pip3 install imutils
+
 1. Launch Gazebo in TurtleBot3 World
 
 	$ roslaunch turtlebot3_gazebo turtlebot3_world.launch

@@ -1,3 +1,4 @@
+
 #####################################################################################
 Ensure that your workshop materials have been submitted first before trying this out!
 Ensure that your Project4.py work for the virtual system first!!!
@@ -34,7 +35,7 @@ $ roscore
 
 $ ssh pi@192.168.XX.XX
 
-You will see in this terminal that you are connected to the pi’s terminal
+You will see in this terminal that you are connected to the pi's terminal
 
 (C) On the TB3 PC (using the linked pi terminal), type the following to bring up basic packages to start TB3:
 
@@ -44,7 +45,7 @@ $ roslaunch turtlebot3_bringup turtlebot3_robot.launch
 
 $ ssh pi@192.168.XX.XX
 
-(E) Activate rpicamera (Optional for Project1.py)
+(E) Activate rpicamera (Optional for Project4.py)
 
 $ roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
 
