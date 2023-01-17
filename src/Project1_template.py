@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ######## Project 1 for HRSE ########
 ######## Uploading data to ThingSpeak Platform while manual driving the TB3 ########

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ######## DEMO No. 2 for HRSE (TB3) ########
 ######## Uploading data to ThingSpeak Platform while manual driving ########
@@ -27,7 +27,7 @@ data6 = 0
 
 # The ThingSpeak Channel ID
 # Replace this with your Channel ID
-channelID = "1111205"
+channelID = "XXXXXXX"
 
 # The Write API Key for the channel
 # Replace this with your Write API key
@@ -43,22 +43,22 @@ channel = thingspeak.Channel(id=channelID, api_key=apiKey)
 def callback(msg):
 	print('=========================================')
 	print('s1 [0]')
-	print (msg.ranges[0])
+	print(msg.ranges[0])
 
 	print('s2 [45]')
-	print (msg.ranges[45])
+	print(msg.ranges[45])
 
 	print('s3 [90]')
-	print (msg.ranges[90])
+	print(msg.ranges[90])
 
 	print('s4 [180]')
-	print (msg.ranges[180])
+	print(msg.ranges[180])
 
 	print('s5 [270]')
-	print (msg.ranges[270])
+	print(msg.ranges[270])
 
 	print('s6 [315]')
-	print (msg.ranges[315])
+	print(msg.ranges[315])
 
 	# assigning values to global variables
 	global data1, data2, data3, data4, data5, data6
