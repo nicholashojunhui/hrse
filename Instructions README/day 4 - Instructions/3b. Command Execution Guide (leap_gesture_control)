@@ -17,8 +17,12 @@ Command Execution Sequence Instructions (for leap_teleop.py)
 3. Launch Gazebo in TurtleBot3 World
 
 	$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
-	
-4. Run the Publisher node; publish data of your hands' motion to ROS
+
+4a. Export to the LeapSDK folder
+
+	$ export PYTHONPATH=$PYTHONPATH:$HOME/LeapSDK/lib:$HOME/LeapSDK/lib/x64
+
+4b. Run the Publisher node; publish data of your hands' motion to ROS
 
 	$ rosrun leap_motion sender.py
 
