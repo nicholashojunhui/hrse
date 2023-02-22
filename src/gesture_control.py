@@ -36,10 +36,10 @@ while(capture.isOpened()):
 	# Get hand data from the rectangle sub window
 	# You can adjust the position and size of the rectangle to your liking:
 	# cv2.rectangle(image,start_point_X_Y_coordinates,end_point_X_Y_coordinates, colour, thickness)
-	cv2.rectangle(frame, (850,0), (1200,300), (0, 255, 0), 0)
-	crop_image = frame[0:300,850:1200]
-	#cv2.rectangle(frame, (450,80), (600,250), (0, 255, 0), 0)
-	#crop_image = frame[80:250,450:600]
+	#cv2.rectangle(frame, (850,0), (1200,300), (0, 255, 0), 0)
+	#crop_image = frame[0:300,850:1200]
+	cv2.rectangle(frame, (450,80), (600,250), (0, 255, 0), 0)
+	crop_image = frame[80:250,450:600]
 	drawing = np.zeros(crop_image.shape,dtype =  np.uint8)
 
 	# Apply Gaussian blur (also known as Gaussian smoothing); to reduce image noise and reduce detail
